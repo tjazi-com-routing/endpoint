@@ -7,7 +7,7 @@ import java.util.List;
  *
  * This interface will have to be implemented by the core service
  */
-public interface ICoreImplementation {
+public interface IRoutingEndpointCoreImplementation {
 
     void passPayloadToClients(List<String> clientAddresses, String payload);
 }

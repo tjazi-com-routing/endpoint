@@ -1,7 +1,7 @@
 package com.tjazi.routing.endpoint.template.endpoints.amqp;
 
 import com.tjazi.routing.endpoint.messages.RouterToEndpointPayloadMessage;
-import com.tjazi.routing.endpoint.template.coreinterfaces.ICoreImplementation;
+import com.tjazi.routing.endpoint.template.coreinterfaces.IRoutingEndpointCoreImplementation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class RouterToEndpointPayloadMessageHandler {
 
+    /**
+     * This interface has to be implemented as a part of the endpoint implementation
+     */
     @Autowired
-    private ICoreImplementation coreImplementation;
+    private IRoutingEndpointCoreImplementation coreImplementation;
 
     private static final Logger log = LoggerFactory.getLogger(RouterToEndpointPayloadMessageHandler.class);
 
